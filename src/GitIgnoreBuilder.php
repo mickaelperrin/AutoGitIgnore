@@ -70,7 +70,7 @@ class GitIgnoreBuilder extends ClassHelper
             // Test if we need to ignore the package
             // If the option devOnly is set, we check that
             // the package is not in the list of require-dev
-            // AND is set in the list of require packages
+            // OR is set in the list of require packages
             // before skipping.
             if ($devRequires && (!in_array($package->getName(), $devRequires) || in_array($package->getName(), $requires))) {
                 continue;
